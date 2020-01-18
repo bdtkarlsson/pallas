@@ -11,6 +11,7 @@ public class FetchJiraInformationAction extends AnAction {
 
     @Override
     public void actionPerformed(AnActionEvent e) {
+
         client.fetchJiraInformation("PAL-2");
     }
 }
