@@ -1,24 +1,19 @@
 <idea-plugin>
     <id>hackathon.pallas</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <name>Pallas Plugin</name>
+    <vendor email="support@thomas.dk.com" url="http://www.big-plugins.com">Powerful Plugins</vendor>
 
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    Great plugin, very good
     ]]></description>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
-    <!-- uncomment to enable plugin in all products
     <depends>com.intellij.modules.lang</depends>
-    -->
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
-        <toolWindow id="Jira Integration" anchor="right" factoryClass="window.JiraToolWindow">
-
-        </toolWindow>
+        <toolWindow id="Jira Integration" anchor="right" factoryClass="window.JiraToolWindow"/>
     </extensions>
 
     <actions>
