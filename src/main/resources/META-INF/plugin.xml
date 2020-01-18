@@ -16,6 +16,9 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
+        <toolWindow id="Jira Integration" anchor="right" factoryClass="window.JiraToolWindow">
+
+        </toolWindow>
     </extensions>
 
     <actions>
