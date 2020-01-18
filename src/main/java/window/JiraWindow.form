@@ -8,36 +8,28 @@
         <properties/>
         <border type="none"/>
         <children>
-            <component id="9aa3f" class="javax.swing.JLabel" binding="currentDate">
-                <constraints>
-                    <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                    <text value="Date"/>
-                </properties>
-            </component>
-            <component id="44be3" class="javax.swing.JLabel" binding="timeZone">
+            <component id="44be3" class="javax.swing.JTextField" binding="chosenJira">
                 <constraints>
                     <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                    <text value="TimeZone"/>
+                    <text value=""/>
                 </properties>
             </component>
-            <component id="f02af" class="javax.swing.JLabel" binding="currentTime">
+            <component id="f02af" class="javax.swing.JTextArea" binding="jiraText">
                 <constraints>
                     <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                    <text value="Time"/>
+                    <text value=""/>
                 </properties>
             </component>
-            <component id="5fceb" class="javax.swing.JButton" binding="refreshToolWindowButton">
+            <component id="5fceb" class="javax.swing.JButton" binding="fetchJiraButton">
                 <constraints>
                     <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                    <text value="Refresh"/>
+                    <text value="Fetch Jira"/>
                 </properties>
             </component>
             <component id="3edc1" class="javax.swing.JButton" binding="hideToolWindowButton">
