@@ -1,0 +1,63 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, comp jiraIdentifierField:::p:109:p, space :::p, comp fetchJiraButton:::p:85:p, space ::82:x, comp statusBox:::p::p, space :p:35:p}};par l {seq t {space :::x, comp tabbedPane:::p::p, space ::12:x}}"
+			"$verticalGroup": "par l {seq l {space :::p, par b {comp statusBox::b:p::p, comp jiraIdentifierField::b:p::p, comp fetchJiraButton::b:p::p}, space ::227:x}};par l {seq t {space ::42:x, comp tabbedPane:::p:198:p, space ::20:x}}"
+		} ) {
+			name: "myToolWindowContent"
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jiraIdentifierField"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "fetchJiraButton"
+				"text": "Fetch JIRA"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "statusBox"
+			} )
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "tabbedPane"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, comp scrollPane2:::p:385:p, space :::x}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp scrollPane2:::p:157:p, space :::x}}"
+				} ) {
+					name: "infoPane"
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane2"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "infoTextArea"
+							"editable": false
+							"lineWrap": true
+						} )
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Info"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {par l {seq {space :::p, comp commentScrollPane:::p:383:p}, seq l {space :p:158:p, comp commentButton:::p::p}}, space ::8:x}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp commentScrollPane:::p:113:p, space :::p, comp commentButton:::p::p, space ::14:x}}"
+				} ) {
+					name: "commentPane"
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "commentScrollPane"
+						add( new FormComponent( "javax.swing.JEditorPane" ) {
+							name: "commentEditorPane"
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "commentButton"
+						"text": "Send2"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Comment"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 415, 260 )
+		} )
+	}
+}

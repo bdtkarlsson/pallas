@@ -15,7 +15,8 @@ public class JiraToolWindow implements ToolWindowFactory {
 
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
-        JiraWindow myToolWindow = new JiraWindow(toolWindow);
+        JiraWindow myToolWindow = new JiraWindow();
+        myToolWindow.initComponents();
         ContentFactory contentFactory = ContentFactory.SERVICE.getInstance();
         Content content = contentFactory.createContent(myToolWindow.getContent(), "", false);
         toolWindow.getContentManager().addContent(content);
