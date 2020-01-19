@@ -51,6 +51,45 @@ public class JiraClient {
         }
     }
 
+    public void getTransitions(String jiraIdentifier) {
+        HttpGet req = new HttpGet(JIRA_URL + "/rest/api/2/issue/" + jiraIdentifier + "transitions");
+        req.addHeader("Authorization", "Basic " + SUPER_SECRET_LOL);
+        req.addHeader("content-type", "application/json; charset=UTF-8");
+
+        try {
+            CloseableHttpResponse rsp = httpClient.execute(req);
+            String responseAsString = getResponseAsString(rsp);
+            // Parse transitions into a list and call at init in JiraToolWindow
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public int changeStatus(String jiraIdentifier, String comment) {
+        try {
+            // http://localhost:8080/jira/rest/api/2/issue/JC-11/transitions?expand=transitions.fields
+            HttpPost request = new HttpPost(JIRA_URL + "/rest/api/2/issue/" + jiraIdentifier + "/transitions?expand=transitions.fields" );
+            // UPDATE the body to be correct
+            String body = "{" +
+                    "\"body\":\"" + comment + "\",\"visibility\": {\"type\": \"role\", \"value\": \"Administrators\"}}";
+            StringEntity entity = new StringEntity(body);
+            request.setEntity(entity);
+
+            request.addHeader("Authorization", "Basic " + SUPER_SECRET_LOL);
+            request.addHeader("content-type", "application/json; charset=UTF-8");
+
+            CloseableHttpResponse rsp = httpClient.execute(request);
+            return rsp.getStatusLine().getStatusCode();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Nu gick det åt skogen");
+            return -1;
+        }
+    }
+
     public Optional<JiraInformation> fetchJiraInformation(String jiraIdentifier) {
 
         try {

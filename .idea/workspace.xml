@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f839c47f-364c-4b10-a033-0a2c4a008894" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/window/JiraWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/window/JiraWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/window/JiraWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/window/JiraWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/JiraClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/JiraClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
